@@ -1,0 +1,43 @@
+### Register a New Teacher
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "Mr. Chanikya",
+  "email": "teacher@eduflow.com",
+  "password": "securepassword123",
+  "role": "teacher"
+}
+
+
+### Login as Teacher
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "teacher@eduflow.com",
+  "password": "securepassword123"
+}
+
+### Create a New Course (Protected Route)
+POST http://localhost:5000/api/courses/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NzIwNDg1NDcsImV4cCI6MTc3MjY1MzM0N30.9QLFWU-Ki0CbAQj2QI5UvQOHcR68FZQ_DkXwY2ry-tA
+
+{
+  "title": "Mastering Python for Data Science",
+  "description": "Learn Python, Pandas, and Machine Learning.",
+  "thumbnail_url": "https://example.com/python-image.jpg"
+}
+
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NzIwNDg1NDcsImV4cCI6MTc3MjY1MzM0N30.9QLFWU-Ki0CbAQj2QI5UvQOHcR68FZQ_DkXwY2ry-tA
+
+   {
+     "username": "Student One",
+     "email": "student@eduflow.com",
+     "password": "student123",
+     "role": "student"
+   }

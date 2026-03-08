@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "react-router-dom": "^7.13.1"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.38.0"
+  }
+}
